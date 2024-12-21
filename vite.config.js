@@ -12,7 +12,6 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
           logLevel: 'debug',
           rewrite: (path) => path.replace(/^\/api/, ''),
-          console.log('Backend URL:', env.VITE_BACKEND_URL);
         }
       }
     }
