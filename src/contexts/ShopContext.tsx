@@ -40,8 +40,9 @@ export function ShopProvider({ children }: { children: ReactNode }) {
         console.log('Shops already fetched, returning existing data.');
         return shops; // Return the existing shops data
       }
-  
-      const endpoint = slug ? `/api/shops/${slug}` : `/api/shops`;
+      
+      const const baseURL = import.meta.env.VITE_BACKEND_URL; = import.meta.env.VITE_BACKEND_URL;
+      const endpoint = slug ? `${baseURL}/api/shops/${slug}` : `/api/shops`;
       const response = await fetch(endpoint);
   
       if (!response.ok) throw new Error('Failed to fetch shop data');
