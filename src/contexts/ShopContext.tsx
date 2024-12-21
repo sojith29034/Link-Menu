@@ -41,7 +41,7 @@ export function ShopProvider({ children }: { children: ReactNode }) {
         return shops; // Return the existing shops data
       }
       
-      const const baseURL = import.meta.env.VITE_BACKEND_URL; = import.meta.env.VITE_BACKEND_URL;
+      const const baseURL = import.meta.env.VITE_BACKEND_URL;
       const endpoint = slug ? `${baseURL}/api/shops/${slug}` : `/api/shops`;
       const response = await fetch(endpoint);
   
